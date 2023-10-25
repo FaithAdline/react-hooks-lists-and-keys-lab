@@ -6,8 +6,11 @@ const project = {
   id: 1,
   name: "Reciplease",
   about: "A recipe tracking app",
-  technologies: ["Rails", "Bootstrap CSS"],
+  technologies: ["Rails", "Bootstrap CSS" ],
 };
+
+// Increase the maximum number of event listeners
+require('events').EventEmitter.defaultMaxListeners = 15;
 
 test("each <span> element has a unique key prop", () => {
   let errorSpy = jest.spyOn(global.console, "error");
